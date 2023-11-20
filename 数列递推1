@@ -1,0 +1,31 @@
+#include <iostream>
+#include<istream>
+
+using namespace std;
+//数列项i：  1   2   3   4   ...   n
+//数列值ai： 2  -2  -14  -50 ...   (-2)*3^(n-1)+4
+//数列和si： 2   0  -14  -64 ...   (1-3^n)+4n
+int main() {
+	int i = 1, ap = 2, an,sp=2,sn;
+	
+	while (i < 15) {
+		i++;
+		an = ap * 3 - 8;
+		sn = sp + an;
+		ap = an;
+		sp = sn;
+		
+		
+	}
+	cout << ap<<endl<<sn;
+	
+
+	  
+
+
+
+
+	    
+	system("pause");
+		return 0;
+}
