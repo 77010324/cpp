@@ -14,3 +14,24 @@
 	system("pause");
 	return 0;
 }
+
+
+
+
+
+双循环写阶乘和：
+ int main() {
+	 int i = 1, an = 1, j = 1, sn = 0;
+	 while (i <=10) {
+		 while (j <= i) {
+			 an = an * j;
+			 j++;
+		 }
+		 sn = sn + an;
+		 i++;
+		 }
+	 
+	 cout << sn;
+	 system("pause");
+	return 0;
+}
