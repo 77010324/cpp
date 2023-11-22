@@ -1,0 +1,36 @@
+#include<iostream>
+#include<istream>
+using namespace std;
+
+
+#include <cmath>
+
+int main() {
+    for (int num = 100; num <= 999; num++) {
+        int originalNum = num;
+        int sum = 0;
+        int numDigits = 0;
+
+        // 计算数字的位数
+        while (originalNum != 0) {
+            originalNum /= 10;
+            numDigits++;
+        }
+
+        originalNum = num;
+
+        // 计算每个位上的数字的n次幂之和
+        while (originalNum != 0) {
+            int digit = originalNum % 10;
+            sum += pow(digit, numDigits);
+            originalNum /= 10;
+        }
+
+        // 如果满足水仙花数条件，则输出该数
+        if (sum == num) {
+            std::cout << num << " 是一个水仙花数" << std::endl;
+        }
+    }
+
+    return 0;
+}
